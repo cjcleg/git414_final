@@ -1,0 +1,448 @@
+/*Carla Cleghorn Assignment 7*/ 
+
+/*reset code*/ 
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*end reset code*/ 
+
+
+
+/*global*/ 
+
+body{
+	font-family: Helvetica, sans-serif; 
+	font-weight: 300; 
+	color: black; 
+	margin: 0; 
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
+/*header*/ 
+
+@media screen and (min-width: 320px) and (max-width: 1023px){
+	header img{
+		padding: 10px; 
+		display: block;
+		height: 117px;
+		margin-left: auto;
+		margin-right:auto;
+	}
+	/*nav/ 
+
+
+	/*nav for mobile and tablet view*/ 
+	/*design tweaked for mobile and tablet accoriding to A5/A6 review comments*/
+	nav{
+		text-align: center;
+		text-decoration: none;/*global*/
+		font-size:16px;
+		list-style-type: none;
+		margin-bottom:10px;
+	}
+
+	nav li{
+		margin:2px;
+		height: 20px;
+		text-decoration: none;
+	}
+
+	nav li a{
+		padding:2px;
+		display: block;
+		text-decoration: none;
+		font-weight: bold;  
+		color: white;
+	}
+
+	#home { 
+		background: #AE3637;
+	}
+
+	#about { 
+		background: #F8B02C;
+	}
+
+	#contact {
+		background: #018AA4;
+	}
+	/*styling for mobile home page image gallery*/
+
+	.container{
+		display:inline-block;
+		column-count: 1; 
+	}
+
+	.container img {
+		width: 80%;
+		height: auto;
+		margin-left: 10%;
+		margin-bottom: 2%;
+	}
+	/*about page main contents for mobile and tablet*/
+	/*hide h1 for tablet and mobile view*/ 
+	.about h1{
+		display: none; 
+	}
+
+	/*image styling for mobile*/
+	.about img{
+		margin-left: 10%;
+	 	height: auto;
+	 	width:80%;
+	}
+
+	.about p{
+		margin-top:2%; 
+		text-align: left; 
+		margin-left: 5%;
+		margin-right: 5%;
+		font-size: 16px;
+		line-height:22px;
+	}
+
+	.about a{
+		margin-top:2%;
+		line-height:22px;
+		text-align: center; 
+		display: block;
+		font-size: 16px;
+		text-decoration: underline; 
+		color: black;
+	}
+
+	.about{
+		margin-bottom: 5%;
+	}
+
+	/*contact page main content*/
+
+	/*hide h1 for mobile/tablet devices*/ 
+	.contact h1{
+		display:none;
+	}
+
+	/*all except font-size should apply to mobile and tablet*/
+	.contact p{
+		text-align: left; 
+		margin-left: 5%;
+		margin-right: 5%;
+		font-size: 16px;
+		padding: 3%;
+		margin-bottom:2%;
+		line-height: 22px;
+	}
+	/*form styles for mobile and tablet*/ 
+	.contact form{
+		width: 90%; 
+		margin-left:auto;
+		margin-right:auto;
+	}
+	form {
+		display: grid;
+		grid-template-columns: 15% 1fr; 
+		grid-gap: 10px;
+		padding-bottom:5%;
+	}
+
+	/*font size and padding change with tablet and desktop view*/ 
+	label{
+		font-size: 16px;
+		padding: 2px;
+		grid-column: 1/2;
+	}
+
+	input{
+		grid-column: 2/3;
+		height: 22px;
+	}
+
+	textarea{
+		height: 100px;
+	}
+	/*styling for checkbox*/ 
+	.sub {
+		display: inline;
+		grid-column: 2/3;
+		padding: 0;
+		margin: 0;
+		text-align: center;
+		vertical-align: middle; 
+	}
+	/*styling for submit button*/ 
+
+	/*size of button and font size will change for desktop
+	same styles apply for tablet button*/ 
+	input[type=submit]{
+		font-family: Flegrei, sans-serif; 
+		width: 80px;
+		height: 25px;
+		border:none;
+		background-color: #AE3637;
+		border-radius: 5px; 
+		color: #F8B02C;
+		margin-left: auto;
+		margin-right:auto;
+		margin-top:10px;
+		margin-bottom:10px;
+	}
+}
+
+/*footer styling for mobile, tablet and desktop*/ 
+
+footer {
+	background-color: #F8B02C;
+	height: 100px;
+	text-align: center; 
+	font-size: 16px;
+}
+
+footer ul{
+	list-style: none;
+	display: inline-block;
+	padding-right: 25px; 
+	padding-bottom: 20px;
+
+}
+footer li{	
+	display:inline;
+}
+
+footer img{
+	margin: 10px; 
+	height: 25px; 
+	object-fit: contain;
+	width:auto;
+}
+
+@media screen and (min-width: 1024px) {
+
+	/*header for desktop*/ 
+	header img{
+		padding: 30px; 
+		display: block;
+		height: 100px;
+		margin-left:auto;
+		margin-right:auto;
+	}
+
+	#home { 
+		background: url("graphics/shape1.jpg");
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+	}
+	#about { 
+		background: url("graphics/shape2.jpg");
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+	}
+
+	#contact {
+		background: url("graphics/shape3.jpg");
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position:center;
+	}
+
+	/*navigation bar for desktop */
+
+	nav{
+		height: 30px;
+		text-align: center;
+		text-decoration: none; /*global*/
+		list-style-type: none;
+		margin-bottom: 75px;
+		margin-left: auto;
+		margin-right:auto; 
+	}
+
+	nav li{
+		display: inline;
+		text-decoration: none;
+	}
+
+	nav a{
+		display: inline-block;
+		padding:20px;
+		text-decoration: none;
+		font-size: 22px;
+		color: black;
+	}
+
+	/*home page image gallery for desktop*/ 
+
+	.container{
+		margin-top:50px;
+		display:inline-block;
+		column-count: 3; 
+	}
+
+	.container img {
+		width: 90%;
+		height: auto;
+		margin-left: 5%;
+		margin-bottom: 5%;
+	}
+
+	/*styling for about page desktop*/
+	.about h1 {
+		font-family: Flegrei; 
+		color: #F8B02C;
+		font-size:75px;
+		margin-bottom:2%;
+		text-align: center;
+	}
+	.about img{
+		display: block;
+		float:left;
+		margin-left: 5%;
+		margin-right: 5%;
+	 	height: auto;
+	 	width:40%;
+	 	margin-bottom: 5%;
+	}
+
+	.about p{
+		display: block;
+		text-align: left; 
+		margin-left: 5%;
+		margin-right: 5%;
+		font-size: 18px;
+		line-height:22px;
+	}
+
+	.about a{
+		margin-top:2%;
+		line-height:22px;
+		text-align: center; 
+		display: block;
+		font-size: 18px;
+		text-decoration: underline; 
+		color: black;
+	}
+	.about{
+		margin-bottom: 200px;
+	}
+
+	/*contact for desktops*/
+	.contact h1{
+		font-family: Flegrei, sans-serif; 
+		color: #018AA4;;
+		font-size:75px;
+		text-align: center;
+	}
+
+	.contact p{
+		text-align: left; 
+		margin-left: 20%;
+		margin-right: 20%;
+		font-size: 18px;
+		padding: 3%;
+		line-height: 22px;
+	}
+
+	/*form styling for desktops*/ 
+
+	.contact form{
+		width: 60%; 
+		margin-left:auto;
+		margin-right:auto;
+	}
+
+	form {
+	display: grid;
+	grid-template-columns: 15% 1fr; 
+	grid-gap: 10px;
+	padding-bottom:5%;
+	}
+
+	label{
+		font-size: 18px;
+		padding: 2px;
+		grid-column: 1/2;
+	}
+
+	input{
+		grid-column: 2/3;
+		height: 24px;
+	}
+
+	textarea{
+		height: 150px;
+	}
+
+	/*styling for checkbox*/ 
+	.sub {
+		display: inline;
+		grid-column: 2/3;
+		padding: 0;
+		margin: 0;
+		text-align: center;
+		vertical-align: middle; 
+	}
+	input[type=submit]{
+		font-family: Flegrei, sans-serif; 
+		font-size: 20px;
+		width: 100px;
+		height: 40px;
+		border:none;
+		background-color: #AE3637;
+		border-radius: 5px; 
+		color: #F8B02C;
+		margin-left: auto;
+		margin-right:auto;
+		margin-top:10px;
+		margin-bottom:10px;
+	}
+}
